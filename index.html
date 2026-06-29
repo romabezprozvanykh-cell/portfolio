@@ -6,37 +6,54 @@
 <title>Roman Web Studio</title>
 
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="hero">
+<header class="hero">
   <h1>Roman Web Studio</h1>
-  <p>Modern websites for local businesses</p>
+  <p>High-end websites for local businesses</p>
 
   <div>
-    <a href="#work" class="btn">View Work</a>
-    <a href="#contact" class="btn">Contact</a>
+    <a class="btn" href="#work">View Work</a>
+    <a class="btn" href="#contact">Contact</a>
   </div>
-</div>
+</header>
 
 <section id="work">
-  <h2>Projects</h2>
+  <h2>What I Build</h2>
 
   <div class="grid">
 
-    <a class="card" href="barbershop.html"
-       style="background-image:url('https://images.unsplash.com/photo-1622296089863-eb7fc530daa8'); background-size:cover; height:200px;">
-      Barbershop Website
+    <a class="card" href="barbershop.html">
+      <h3>Barbershop Website</h3>
+      <p>Luxury booking system, modern design, high conversion layout.</p>
     </a>
 
-    <div class="card image"
-       style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de');">
+    <div class="card">
+      <h3>Restaurant Website</h3>
+      <p>Menu-driven design with reservation flow and visuals.</p>
     </div>
 
-    <div class="card image"
-       style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c');">
+    <div class="card">
+      <h3>Nail Salon Website</h3>
+      <p>Elegant beauty-focused booking experience.</p>
     </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Featured Visuals</h2>
+
+  <div class="grid">
+
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1400&q=80')"></div>
+
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1400&q=80')"></div>
+
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80')"></div>
 
   </div>
 </section>
@@ -55,19 +72,18 @@
 
     <div>
       <h3>Roman Web Studio</h3>
-      <p>Web design for local businesses.</p>
+      <p>Modern websites for local businesses.</p>
     </div>
 
     <div>
       <h3>Legal</h3>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Policy</a>
-      <a href="#">Terms</a>
-      <a href="#">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="terms.html">Terms</a>
     </div>
 
     <div>
-      <h3>Socials</h3>
+      <h3>Social</h3>
       <a href="#">Instagram</a>
       <a href="#">TikTok</a>
       <a href="#">Facebook</a>
@@ -75,23 +91,11 @@
 
     <div>
       <h3>Newsletter</h3>
-      <input placeholder="Email">
+      <input placeholder="Email address">
     </div>
 
   </div>
 </footer>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
-  });
-},{ threshold: 0.12 });
-
-sections.forEach(s => observer.observe(s));
-</script>
 
 </body>
 </html>

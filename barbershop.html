@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barbershop</title>
+<title>London Barbers</title>
 
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>Barbershop</h1>
-  <p>Haircuts & grooming</p>
+<header class="hero"
+style="background-image:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80');">
+  <h1>London Barbers</h1>
+  <p>Premium grooming & modern cuts</p>
 
   <div>
-    <a href="#services" class="btn">Services</a>
-    <a href="#contact" class="btn">Contact</a>
+    <a class="btn" href="#services">Services</a>
+    <a class="btn" href="#about">About</a>
   </div>
-</div>
+</header>
 
 <section id="services">
   <h2>Services</h2>
@@ -28,7 +30,18 @@
     <div class="card">Haircut — £18</div>
     <div class="card">Beard Trim — £15</div>
     <div class="card">Shape Up — £10</div>
+    <div class="card">Senior Cut (65+) — £12</div>
   </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+
+  <p>
+    Established in 2012, London Barbers is a modern grooming studio based in London.
+    We specialise in precision cuts, clean fades and classic styling with a luxury experience.
+    Our barbers combine traditional craftsmanship with modern techniques.
+  </p>
 </section>
 
 <section>
@@ -36,28 +49,21 @@
 
   <div class="grid">
 
-    <div class="image"
-      style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b442d30a');">
-    </div>
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=80')"></div>
 
-    <div class="image"
-      style="background-image:url('https://images.unsplash.com/photo-1622296089863-eb7fc530daa8');">
-    </div>
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=80')"></div>
 
-    <div class="image"
-      style="background-image:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1');">
-    </div>
+    <div class="image" style="background-image:url('https://images.unsplash.com/photo-1520975928316-9b4a6c8c0f3d?auto=format&fit=crop&w=1400&q=80')"></div>
 
   </div>
 </section>
 
-<section id="contact">
+<section>
   <h2>Contact</h2>
 
   <div class="contact">
     <p>Phone: +44 7XXX XXX XXX</p>
-    <p>Email: info@barbershop.co.uk</p>
-    <p>Walk-ins available daily</p>
+    <p>Walk-ins & bookings available daily</p>
   </div>
 </section>
 
@@ -65,44 +71,31 @@
   <div class="footer-grid">
 
     <div>
-      <h3>Barbershop</h3>
-      <p>London grooming studio.</p>
+      <h3>London Barbers</h3>
+      <p>Premium grooming studio in London.</p>
     </div>
 
     <div>
       <h3>Legal</h3>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Cookie Policy</a>
-      <a href="#">Terms</a>
-      <a href="#">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="terms.html">Terms</a>
     </div>
 
     <div>
-      <h3>Socials</h3>
+      <h3>Social</h3>
       <a href="#">Instagram</a>
       <a href="#">TikTok</a>
       <a href="#">Facebook</a>
     </div>
 
     <div>
-      <h3>Newsletter</h3>
-      <input placeholder="Email">
+      <h3>Hours</h3>
+      <p>Mon–Sat: 9am–7pm</p>
     </div>
 
   </div>
 </footer>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
-  });
-},{ threshold: 0.12 });
-
-sections.forEach(s => observer.observe(s));
-</script>
 
 </body>
 </html>
