@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbershop</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Barbershop</h1>
+  <p>Haircuts & grooming</p>
+
+  <div>
+    <a href="#services" class="btn">Services</a>
+    <a href="#contact" class="btn">Contact</a>
+  </div>
+</div>
+
+<section id="services">
+  <h2>Services</h2>
+
+  <div class="grid">
+    <div class="card">Skin Fade — £20</div>
+    <div class="card">Haircut — £18</div>
+    <div class="card">Beard Trim — £15</div>
+    <div class="card">Shape Up — £10</div>
+  </div>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+
+  <div class="grid">
+
+    <div class="image"
+      style="background-image:url('https://images.unsplash.com/photo-1593702288056-7927b442d30a');">
+    </div>
+
+    <div class="image"
+      style="background-image:url('https://images.unsplash.com/photo-1622296089863-eb7fc530daa8');">
+    </div>
+
+    <div class="image"
+      style="background-image:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1');">
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact">
+    <p>Phone: +44 7XXX XXX XXX</p>
+    <p>Email: info@barbershop.co.uk</p>
+    <p>Walk-ins available daily</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+
+    <div>
+      <h3>Barbershop</h3>
+      <p>London grooming studio.</p>
+    </div>
+
+    <div>
+      <h3>Legal</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">About</a>
+    </div>
+
+    <div>
+      <h3>Socials</h3>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Facebook</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <input placeholder="Email">
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("show");
+  });
+},{ threshold: 0.12 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

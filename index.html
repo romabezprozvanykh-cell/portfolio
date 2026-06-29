@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roman Web Studio</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Roman Web Studio</h1>
+  <p>Modern websites for local businesses</p>
+
+  <div>
+    <a href="#work" class="btn">View Work</a>
+    <a href="#contact" class="btn">Contact</a>
+  </div>
+</div>
+
+<section id="work">
+  <h2>Projects</h2>
+
+  <div class="grid">
+
+    <a class="card" href="barbershop.html"
+       style="background-image:url('https://images.unsplash.com/photo-1622296089863-eb7fc530daa8'); background-size:cover; height:200px;">
+      Barbershop Website
+    </a>
+
+    <div class="card image"
+       style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de');">
+    </div>
+
+    <div class="card image"
+       style="background-image:url('https://images.unsplash.com/photo-1526045478516-99145907023c');">
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact">
+    <p>Phone: +44 7867 235 542</p>
+    <p>Email: r.bezprozvannykh@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+
+    <div>
+      <h3>Roman Web Studio</h3>
+      <p>Web design for local businesses.</p>
+    </div>
+
+    <div>
+      <h3>Legal</h3>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Terms</a>
+      <a href="#">About</a>
+    </div>
+
+    <div>
+      <h3>Socials</h3>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Facebook</a>
+    </div>
+
+    <div>
+      <h3>Newsletter</h3>
+      <input placeholder="Email">
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("show");
+  });
+},{ threshold: 0.12 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
